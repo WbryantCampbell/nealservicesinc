@@ -1,0 +1,53 @@
+﻿@model NealServices.Models.EmailMessage
+@{
+    ViewBag.Title = "Contact";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <hr />
+            @using (Html.BeginForm("Contact", "Home", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+            {
+
+                @Html.AntiForgeryToken()
+
+                <div class="form-group">
+                    <label>Name</label>
+                    @Html.ValidationMessageFor(model => model.strFromName, "", new { @class = "text-danger" })
+                    <div>
+                        @Html.TextBoxFor(m => m.strFromName, new { @class = "form-control textbox" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    @Html.ValidationMessageFor(model => model.strFromAddress, "", new { @class = "text-danger" })
+                    <div>
+                        @Html.TextBoxFor(m => m.strFromAddress, new { @class = "form-control textbox" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    @Html.ValidationMessageFor(model => model.strPhone, "", new { @class = "text-danger" })
+                    <div >
+                        @Html.TextBoxFor(m => m.strPhone, new { @class = "form-control textbox" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Message</label>
+                    @Html.ValidationMessageFor(model => model.strBody, "", new { @class = "text-danger" })
+                    <div>
+                        @Html.TextAreaFor(m => m.strBody, new { @class = "form-control textbox", @style = "height: 160px;" })
+                    </div>
+                </div>
+
+                <input type="submit" class="btn btn-success btn-block" value="Send us a Message!" />
+            }
+        </div>
+        <div class="col-md-6" >
+            <iframe src="https://www.google.com/maps/embed?pb=!1m19!1m8!1m3!1d96496.9787701232!2d-81.5422379!3d40.9041108!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x8836d5cabe255409%3A0xe263126cb4f23ee4!2sneal+services+inc!3m2!1d40.904132!2d-81.47219799999999!5e0!3m2!1sen!2sus!4v1515637287182" width="800" height="520" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+
+<link href="~/Content/Index.css" rel="stylesheet" />
+

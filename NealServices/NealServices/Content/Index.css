@@ -1,0 +1,58 @@
+﻿@font-face {
+    font-family: nealstandard;
+    src: url('~/fonts/BebasNeue Regular.otf');
+}
+
+body {
+}
+
+
+.navbar {
+    background-color: rgb(49, 74, 138);
+}
+
+.banner {
+    /*-webkit-border-radius: 25px;
+    border-radius: 25px;*/
+    -webkit-box-shadow: 6px 6px 20px 1px rgb(49, 74, 138);
+    box-shadow: 6px 6px 20px 1px rgb(49, 74, 138);
+    margin: 10px;
+    background-color: white;
+    padding: 8px;
+    text-align: center;
+    font-family: nealstandard;
+}
+
+.btn-block {
+    display: block;
+    min-width: 100%;
+}
+
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.testi {
+    font-family: nealstandard;
+    font-size: 4.2em;
+}
+
+.testi-text {
+    font-family: nealstandard;
+    font-size: 2.0em;
+}
+
+.phonenum {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.5em;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.textbox {
+    display: block;
+    overflow: hidden;
+}
